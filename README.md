@@ -4,6 +4,6 @@ Java library + tools allowing to parse/create/edit/convert/save almost any type 
 
 Java Swing dependency and tool module removed from this forked version.
 
-# Build without Javadoc to local Maven repo
+### Build without Javadoc to local Maven repo
 
 mvn -Dmaven.javadoc.skip=true package install
