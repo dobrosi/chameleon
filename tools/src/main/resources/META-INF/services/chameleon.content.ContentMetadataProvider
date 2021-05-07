@@ -1,6 +1,0 @@
-chameleon.content.SoundMetadataProvider
-chameleon.content.ImageMetadataProvider
-# Not currently building
-#chameleon.content.FFMPEGMetadataProvider
-# Commented: unable to make it work at the moment...
-#chameleon.content.VLCMetadataProvider

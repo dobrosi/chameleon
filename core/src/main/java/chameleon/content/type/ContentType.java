@@ -27,8 +27,6 @@ package chameleon.content.type;
 import java.io.File;
 import java.util.Locale;
 
-import javax.swing.filechooser.FileFilter;
-
 import chameleon.player.PlayerSupport;
 
 /**
@@ -37,7 +35,7 @@ import chameleon.player.PlayerSupport;
  * @version $Revision: 92 $
  * @author Christophe Delory
  */
-public class ContentType extends FileFilter implements Cloneable
+public class ContentType implements Cloneable
 {
     /**
      * A list of file extensions, for example: <code>.txt</code>.
@@ -139,7 +137,6 @@ public class ContentType extends FileFilter implements Cloneable
      * Returns the friendly description of the content type.
      * @return a content type description. May be <code>null</code>.
      * @see #setDescription
-     * @see FileFilter#getDescription
      */
     public String getDescription()
     {
@@ -182,13 +179,11 @@ public class ContentType extends FileFilter implements Cloneable
     /**
      * Tests whether the name of the given file matches the specified file extension pattern.
      * <br>
-     * <u>CAUTION</u>: this method accepts also all directories, in order to be properly used with a {@link javax.swing.JFileChooser}.
      * @param f the file to test. Shall not be <code>null</code>.
      * @return <code>true</code> if the file extension matches this content type.
      * @throws NullPointerException if <code>f</code> is <code>null</code>.
      * @see #matchExtension
      */
-    @Override
     public boolean accept(final File f)
     {
         return (f.isDirectory()) ? true : matchExtension(f.getName()); // Throws NullPointerException if f is null.

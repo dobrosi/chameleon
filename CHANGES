@@ -1,3 +1,6 @@
+Version 1.1.1.rs
+    * Removed swing version
+
 Version 1.1.1
 
     * Tracker issue "Transcode.sh doesn't work on Linux due to DOS line endings" solved thanks to chocolateboy
